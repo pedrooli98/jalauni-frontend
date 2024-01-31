@@ -25,26 +25,25 @@ header>h1 {
 main {
     background-color: rgb(198, 213, 214);
 
-    height: 100vh;
     padding: 2em 18%;
 
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
 
     gap: 2em;
 
 }
 
-main > h2 {
+main>h2 {
     font-size: 1.2em;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 2em;
 }
 
-main > section > ul {
+main>section>ul {
     width: 100%;
     max-width: 1060px;
     display: flex;
@@ -56,13 +55,13 @@ main > section > ul {
 
 }
 
-main > section > ul > li {
+main>section>ul>li {
     background-color: lightblue;
     border-radius: 0.3em;
 
     font-size: 0.8em;
     text-align: center;
-    
+
     min-width: 210px;
     max-width: 310px;
     width: 100%;
@@ -71,18 +70,57 @@ main > section > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+
+
     padding: 0 0.2em;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-  }
-  input, select {
+}
+
+input,
+select {
     margin-bottom: 10px;
-  }
-  .error-message {
+}
+
+.error-message {
     color: red;
-  }
+}
+
+#contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="submit"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    height: 48px;
+}
