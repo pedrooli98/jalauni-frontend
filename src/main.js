@@ -32,3 +32,25 @@ function validateForm() {
     // Form is valid, you can proceed with form submission
     return true;
   }
+
+  const addItemButton = document.getElementById('addItemButton');
+    const itemList = document.getElementById('itemList');
+
+    addItemButton.addEventListener('click', function() {
+      const newItem = document.createElement('li');
+      newItem.textContent = 'New Item';
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('deleteButton');
+      deleteButton.addEventListener('click', function() {
+        itemList.removeChild(newItem);
+      });
+      newItem.appendChild(deleteButton);
+      itemList.appendChild(newItem);
+    });
+
+    itemList.addEventListener('click', function(event) {
+      if (event.target.classList.contains('deleteButton')) {
+        itemList.removeChild(event.target.parentElement);
+      }
+    });
