@@ -75,3 +75,14 @@ main > section > ul > li {
     
     padding: 0 0.2em;
 }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input, select {
+    margin-bottom: 10px;
+  }
+  .error-message {
+    color: red;
+  }
