@@ -9,48 +9,48 @@ function validateForm() {
     var errorMessage = "";
 
     if (name === "") {
-      errorMessage += "Name is required.\n";
+        errorMessage += "Name is required.\n";
     }
 
     if (email === "") {
-      errorMessage += "Email is required.\n";
+        errorMessage += "Email is required.\n";
     }
 
     if (!gender) {
-      errorMessage += "Gender is required.\n";
+        errorMessage += "Gender is required.\n";
     }
 
     if (interests.length === 0) {
-      errorMessage += "At least one interest is required.\n";
+        errorMessage += "At least one interest is required.\n";
     }
 
     if (errorMessage !== "") {
-      alert(errorMessage);
-      return false;
+        alert(errorMessage);
+        return false;
     }
 
     // Form is valid, you can proceed with form submission
     return true;
-  }
+}
 
-  const addItemButton = document.getElementById('addItemButton');
-    const itemList = document.getElementById('itemList');
+const addItemButton = document.getElementById('addItemButton');
+const itemList = document.getElementById('itemList');
 
-    addItemButton.addEventListener('click', function() {
-      const newItem = document.createElement('li');
-      newItem.textContent = 'New Item';
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
-      deleteButton.classList.add('deleteButton');
-      deleteButton.addEventListener('click', function() {
+addItemButton.addEventListener('click', function () {
+    const newItem = document.createElement('li');
+    newItem.textContent = 'New Item';
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('deleteButton');
+    deleteButton.addEventListener('click', function () {
         itemList.removeChild(newItem);
-      });
-      newItem.appendChild(deleteButton);
-      itemList.appendChild(newItem);
     });
+    newItem.appendChild(deleteButton);
+    itemList.appendChild(newItem);
+});
 
-    itemList.addEventListener('click', function(event) {
-      if (event.target.classList.contains('deleteButton')) {
+itemList.addEventListener('click', function (event) {
+    if (event.target.classList.contains('deleteButton')) {
         itemList.removeChild(event.target.parentElement);
-      }
-    });
+    }
+});
